@@ -8,6 +8,8 @@ import {AppRoutingModule} from './app-routing.module'
 import {SharedModule} from "./shared/shared.module";
 import { PopapComponent } from './popap/popap.component';
 import {RefDirective} from "./popap/ref.directive";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -20,7 +22,8 @@ import {RefDirective} from "./popap/ref.directive";
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        SharedModule
+        SharedModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [],
     entryComponents: [PopapComponent],
