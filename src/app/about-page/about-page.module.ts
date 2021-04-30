@@ -16,7 +16,7 @@ import {CommonModule} from "@angular/common";
         CommonModule,
         RouterModule.forChild([
             {
-                path: 'about', component: AboutPageComponent, children: [
+                path: '', component: AboutPageComponent, children: [
                     {path: 'extra', component: AboutExtraPageComponent}]
             },
         ])
