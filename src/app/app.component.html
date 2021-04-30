@@ -1,3 +1,5 @@
+<ng-template appRef></ng-template>
+
 <nav class="navbar">
     <h1>Angular Modules</h1>
 
@@ -14,11 +16,11 @@
 
     </div>
 
-    <button class="btn" (click)="modal = true">Show modal</button>
-    <app-popap *ngIf="modal"
-            title="Modal Window"
-            (close)="modal = false"
-    ></app-popap>
+    <button class="btn" (click)="showModal()">Show modal</button>
+<!--    <app-popap *ngIf="modal"-->
+<!--            title="Modal Window"-->
+<!--            (close)="modal = false"-->
+<!--    ></app-popap>-->
 </div>
 
 

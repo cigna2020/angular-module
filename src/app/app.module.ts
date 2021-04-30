@@ -7,12 +7,14 @@ import {HomePageComponent} from './home-page/home-page.component'
 import {AppRoutingModule} from './app-routing.module'
 import {SharedModule} from "./shared/shared.module";
 import { PopapComponent } from './popap/popap.component';
+import {RefDirective} from "./popap/ref.directive";
 
 @NgModule({
     declarations: [
         AppComponent,
         HomePageComponent,
         PopapComponent,
+        RefDirective
     ],
     imports: [
         BrowserModule,
@@ -21,6 +23,7 @@ import { PopapComponent } from './popap/popap.component';
         SharedModule
     ],
     providers: [],
+    entryComponents: [PopapComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule {
