@@ -12,6 +12,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {CounterTestComponent} from "./counter-test/counter-test.component";
 import {PostsComponent} from "./posts/posts.component";
+import { RoutingComponent } from './routing/routing.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import {PostsComponent} from "./posts/posts.component";
         PopapComponent,
         RefDirective,
         CounterTestComponent,
-        PostsComponent
+        PostsComponent,
+        RoutingComponent
     ],
     imports: [
         BrowserModule,
