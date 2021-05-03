@@ -11,6 +11,7 @@ import {RefDirective} from "./popap/ref.directive";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {CounterTestComponent} from "./counter-test/counter-test.component";
+import {PostsComponent} from "./posts/posts.component";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import {CounterTestComponent} from "./counter-test/counter-test.component";
         HomePageComponent,
         PopapComponent,
         RefDirective,
-        CounterTestComponent
+        CounterTestComponent,
+        PostsComponent
     ],
     imports: [
         BrowserModule,
