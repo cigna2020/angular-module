@@ -4,6 +4,8 @@ import {Observable, Subject} from "rxjs";
 import {ActivatedRoute, Params, Router, RouterOutlet} from "@angular/router";
 import {By} from "@angular/platform-browser";
 import {RouterTestingModule} from "@angular/router/testing";
+import {NavbarComponent} from "../navbar/navbar.component";
+import {NO_ERRORS_SCHEMA} from "@angular/core";
 
 class RouterStub {
   navigate(path: string[]) {};
@@ -31,7 +33,8 @@ describe('RoutingComponent', () => {
       providers: [
         {provide: Router, useClass: RouterStub}, // заменяем класс по умолчанию, необходимо для интегр.тестирования
         {provide: ActivatedRoute, useClass: ActivatedRouteStub}
-      ]
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
     });
     fixture = TestBed.createComponent(RoutingComponent);
     component = fixture.componentInstance;

@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import {CounterTestComponent} from "./counter-test/counter-test.component";
 import {PostsComponent} from "./posts/posts.component";
 import { RoutingComponent } from './routing/routing.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { RoutingComponent } from './routing/routing.component';
         RefDirective,
         CounterTestComponent,
         PostsComponent,
-        RoutingComponent
+        RoutingComponent,
+        NavbarComponent
     ],
     imports: [
         BrowserModule,
