@@ -24,4 +24,16 @@ describe('CounterComponent', () => {
         const elem: HTMLElement = debElement.nativeElement;
         expect(elem.textContent).toContain(num.toString());
     });
+    it('should add green class if counter is even',  () => {
+        component.counter = 6;
+        fixture.detectChanges();
+        const debElement = fixture.debugElement.query(By.css('.counter'));
+        const elem: HTMLElement = debElement.nativeElement;
+        expect(elem.classList.contains('green')).toBeTruthy();
+    });
+    it('should increment counter if inrement button was clicked ',  () => {
+        const btn = fixture.debugElement.query(By.css('#increment'));
+        btn.triggerEventHandler('click', null); // вызов события, второй аргумент, если нужно передать данные
+        expect(component.counter).toBe(1);
+    });
 });
